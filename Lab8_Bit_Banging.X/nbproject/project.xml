@@ -13,6 +13,10 @@
             </sourceRootList>
             <confList>
                 <confElem>
+                    <name>PICkit3</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
                     <name>Simulator</name>
                     <type>2</type>
                 </confElem>
