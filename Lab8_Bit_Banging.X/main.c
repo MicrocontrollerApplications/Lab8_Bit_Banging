@@ -15,7 +15,9 @@ void __init(void);
 void main(void) {
     __init();
     
-    GLCD_Text2Out(1, 1, "Bit Banging rocks! =)");
+    GLCD_Text2Out(0, 3, "Bit");
+    GLCD_Text2Out(1, 1, "Banging");
+    GLCD_Text2Out(2, 0, "rocks! =)");
 
     while (1) {
         for (int i = 0; i < 20000; ++i){
@@ -41,6 +43,6 @@ void __init(void) {
 
 void GLCD_Bit_Banging(unsigned char data)
 {
-    // implement the SPI Bit Banging here
+    // implement your solution here
     
 }
