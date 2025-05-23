@@ -51,7 +51,7 @@ Now that we know the names of our signals and the pins to be used, we should onc
 As shown in above picture, the following requirements for a communication between SPI-Master and SPI-Slave need to be fulfilled:
 1. /CS needs to be pulled down (logical 0)
 2. Values are read on each rising edge of the clock (clock does not need to tick regularly, as long as /CS is low and 8 bit are send)
-3. The order in that the bits are sent is very relevant! You __must__ send the MSB (7th bit) first and the LSB (0th bit) last!
+3. The order in that the bits are sent is very relevant! You __must__ send the MSB (bit 7) first and the LSB (bit 0) last!
 
 To sum it up, you need to pull down the corresponding /CS pin and SCLK pin, set the level for the MSB on the pin related to the display's SDI line and set the SCLK pin's logical level to one, afterward. This way the MSB is read. Now continue with pulling down SCLK, setting the required value (or level, i.e. 0 or 1) and raising SCLK to high afterward. Do this for all 8 bit and set /CS to high again, to end communication.
 
