@@ -4,7 +4,7 @@ In today's lab, you will use a common technique called bit banging to communicat
 # What is Bit Banging
 >**Bit banging** is a term of art that describes a method of digital data transmission as using general-purpose input/output (GPIO) instead of computer hardware that is intended specifically for data communication. Controlling software is responsible for satisfying protocol requirements including timing which can be challenging due to limited host system resources and competing demands on the software.
 
-(from: [Wikipedia](https://en.wikipedia.org/wiki/Bit_banging))
+(source: [Wikipedia](https://en.wikipedia.org/wiki/Bit_banging))
 
 So, basically Bit Banging describes a way to realize a serial (or parallel) interface via software instead of dedicated hardware. Think of the laboratory for serial communication. There we used a dedicated module of our microcontroller to realize the communication via UART. If we would have used bit banging instead you would have needed to take care of Rx' and Tx' logical levels via software. Which is especially complicated as we used USART asynchronous, so the timing is essential and communication must not be interrupted.
 
@@ -13,8 +13,11 @@ Today we will use this technique to realize a more forgiving communication. Ther
 # Repetition of Serial Peripheral Interface (SPI)
 Remember the structure of SPI. For this interface we need 3+n wires, where n is the number of slaves.
 Why do we need 3+n wires? Try to answer this question. Below image might help with that.
+
 ![](images/SPI_single_slave.svg)
+
 (source: [Wikipedia](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#/media/File:SPI_single_slave.svg))
+
 Before we proceed to check which lines are used on our laboratory board for this kind of communication, we need to first make clear to understand the purpose of each line and to know potential different names for those.
 Therefore, complete below table (use the script or google if necessary, avoid using ChatGPT!).
 
@@ -33,7 +36,7 @@ Open the board's [schematic](https://raw.githubusercontent.com/MicrocontrollerAp
 >So, if you see a signals name on the display with such a leading slash, that means that the signal is active low!
 
 Note the displays corresponding SPI signals with their connected pins in below table.
->[!HINT]
+>[!TIP]
 >The __D/C__ input of the display is control input, to inform the display about wether __D__ata or __C__onfiguration is send.
 > __/RES__ is quite obvious. ;)
 
@@ -47,7 +50,9 @@ Note the displays corresponding SPI signals with their connected pins in below t
 Now that we know the names of our signals and the pins to be used, we should once again clarify the timing for SPI communication.
 
 ![](images/SPI_Timing.png)
+
 (source: [embeddedrelated.com](https://www.embeddedrelated.com/showarticle/87.php))
+
 As shown in above picture, the following requirements for a communication between SPI-Master and SPI-Slave need to be fulfilled:
 1. /CS needs to be pulled down (logical 0)
 2. Values are read on each rising edge of the clock (clock does not need to tick regularly, as long as /CS is low and 8 bit are send)
