@@ -1,0 +1,10 @@
+Lab8_Bit_Banging.X/debug/
+Lab8_Bit_Banging.X/build/
+Lab8_Bit_Banging.X/dist/
+Lab8_Bit_Banging.X/nbproject/*
+!Lab8_Bit_Banging.X/nbproject/configurations.xml
+!Lab8_Bit_Banging.X/nbproject/project.xml
+
+*.log*
+/Lab8_Bit_Banging.X/build/
+/Lab8_Bit_Banging.X/dist/
