@@ -58,7 +58,7 @@ To sum it up, you need to pull down the corresponding /CS pin and SCLK pin, set 
 # Exercise
 For today, there is only on exercise - implement the necessary Bit Banging to make the display usable (again).
 Therefore, you need to implement "GLCD_Bit_Banging()" at the end of the main.c-file.
-https://github.com/MicrocontrollerApplications/Lab8_Rotary_Encoder/blob/bc4483f0e9cea8e3c104339f2085b191f684d465/Lab8_Bit_Banging.X/main.c#L42-L46
+https://github.com/MicrocontrollerApplications/Lab8_Bit_Banging/blob/bc4483f0e9cea8e3c104339f2085b191f684d465/Lab8_Bit_Banging.X/main.c#L42-L46
 
 >[!NOTE]
 >You won't find any other GLCD related code within main.c. Honestly, what you're doing today is not good practice in C-programming. But it enables you to focus on the Bit Banging itself, without the need to understand any other parts of the GLCD library.
