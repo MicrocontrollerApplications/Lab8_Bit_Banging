@@ -21,12 +21,12 @@ Why do we need 3+n wires? Try to answer this question. Below image might help wi
 Before we proceed to check which lines are used on our laboratory board for this kind of communication, we need to first make clear to understand the purpose of each line and to know potential different names for those.
 Therefore, complete below table (use the script or google if necessary, avoid using ChatGPT!).
 
-| Signal / Line | Name | Purpose | Alternative name |
-| :--- | :--- | :--- | :--- |
-| $\text{SCLK}$ | | | |
-| $\text{MOSI}$ | | | |
-| $\text{MISO}$ | | | |
-| $\overline{\text{SS}}$ | | | Chip Select $\overline{\text{CS}}$, Serial Chip Enable $\overline{\text{SCE}}$ |
+| Signal / Line          | Name | Purpose | Alternative name                                                                           |
+| :--------------------- | :--- | :------ | :----------------------------------------------------------------------------------------- |
+| $\text{SCLK}$          |      |         |                                                                                            |
+| $\text{MOSI}$          |      |         |                                                                                            |
+| $\text{MISO}$          |      |         |                                                                                            |
+| $\overline{\text{SS}}$ |      |         | (not) Chip Select $\overline{\text{CS}}$, (not) Serial Chip Enable $\overline{\text{SCE}}$ |
 
 Know, that we know the purpose of our lines, we need to check the corresponding connections on our laboratory board.
 Open the board's [schematic](https://raw.githubusercontent.com/MicrocontrollerApplications/Lab2_InputOutput/refs/heads/main/images/uCquick_Board_2018_01.svg) and check the "Display" section of it. There you will find all pins connected to the display.
